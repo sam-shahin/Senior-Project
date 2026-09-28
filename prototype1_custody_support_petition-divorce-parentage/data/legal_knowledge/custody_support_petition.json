@@ -1,0 +1,235 @@
+{
+  "id": "custody_support_petition",
+  "title": "Petition for Custody and Support of Minor Children",
+  "jurisdiction": "California",
+  "version": "1.0",
+  "definitions": [
+    {
+      "id": "DEF_CSP_001",
+      "term": "Petition for Custody and Support",
+      "definition": "A family-law case in which a legal parent asks the court to make orders about child custody, visitation (parenting time), and child support without using a divorce, legal-separation, or annulment case to obtain those orders.",
+      "source_ids": [
+        "SRC_CSP_001",
+        "SRC_CSP_008"
+      ]
+    },
+    {
+      "id": "DEF_CSP_002",
+      "term": "Petitioner",
+      "definition": "The parent who starts the Petition for Custody and Support case.",
+      "source_ids": [
+        "SRC_CSP_003"
+      ]
+    },
+    {
+      "id": "DEF_CSP_003",
+      "term": "Respondent",
+      "definition": "The other parent named in the Petition for Custody and Support case.",
+      "source_ids": [
+        "SRC_CSP_003",
+        "SRC_CSP_006"
+      ]
+    },
+    {
+      "id": "DEF_CSP_004",
+      "term": "Service",
+      "definition": "The formal process of giving the other parent copies of the filed court papers so they are officially notified of the case.",
+      "source_ids": [
+        "SRC_CSP_001",
+        "SRC_CSP_005"
+      ]
+    },
+    {
+      "id": "DEF_CSP_005",
+      "term": "Personal service",
+      "definition": "A common method of service in which another adult who is at least 18 and is not a party to the case personally delivers the required papers to the other parent.",
+      "source_ids": [
+        "SRC_CSP_005"
+      ]
+    },
+    {
+      "id": "DEF_CSP_006",
+      "term": "Default",
+      "definition": "A case status that can occur when the respondent does not file a response within the response period, allowing the petitioner to ask the court to decide the case without the respondent's input.",
+      "source_ids": [
+        "SRC_CSP_005",
+        "SRC_CSP_007"
+      ]
+    },
+    {
+      "id": "DEF_CSP_007",
+      "term": "Temporary orders",
+      "definition": "Court orders requested before the case is final to address issues such as custody, parenting time, or child support while the case is pending.",
+      "source_ids": [
+        "SRC_CSP_003",
+        "SRC_CSP_006"
+      ]
+    }
+  ],
+  "laws": [
+    {
+      "id": "LAW_CSP_001",
+      "title": "Who may use a Petition for Custody and Support",
+      "statement": "This case type is available only when the people involved are already legal parents and fit an eligible situation, such as being married but not seeking divorce or legal separation, having signed a Voluntary Declaration of Parentage or paternity, having legally adopted the child together, or having already been determined to be the child's legal parents by another court.",
+      "source_ids": [
+        "SRC_CSP_001",
+        "SRC_CSP_008"
+      ]
+    },
+    {
+      "id": "LAW_CSP_002",
+      "title": "Orders available in a custody and support petition",
+      "statement": "In a Petition for Custody and Support case, a judge can make orders concerning child custody, visitation or parenting time, and child support.",
+      "source_ids": [
+        "SRC_CSP_001",
+        "SRC_CSP_008"
+      ]
+    },
+    {
+      "id": "LAW_CSP_003",
+      "title": "Parentage may need to be established first",
+      "statement": "If the people involved are not already both legal parents, a parentage process may be required before using the Petition for Custody and Support case type.",
+      "source_ids": [
+        "SRC_CSP_001"
+      ]
+    },
+    {
+      "id": "LAW_CSP_004",
+      "title": "Filing the petition alone does not create a court date",
+      "statement": "Starting a custody and support case does not by itself obtain a hearing or temporary decision from a judge. Additional papers are required when a party wants temporary custody, parenting-time, or support orders before the case is final.",
+      "source_ids": [
+        "SRC_CSP_003"
+      ]
+    },
+    {
+      "id": "LAW_CSP_005",
+      "title": "The other parent must be formally notified",
+      "statement": "After the case is filed, the other parent must be served with the required court papers before the case can move forward through the ordinary process.",
+      "source_ids": [
+        "SRC_CSP_001",
+        "SRC_CSP_005"
+      ]
+    },
+    {
+      "id": "LAW_CSP_006",
+      "title": "Response period after service",
+      "statement": "After the respondent is served, the respondent generally has 30 days to file a response. If no response is filed within that period, the petitioner may ask the court to proceed by default.",
+      "source_ids": [
+        "SRC_CSP_005",
+        "SRC_CSP_006"
+      ]
+    },
+    {
+      "id": "LAW_CSP_007",
+      "title": "Finalization depends on how the case is resolved",
+      "statement": "A custody and support case can be finalized after a default, a written and signed agreement, or a final decision by a judge after trial. If the parents cannot agree, they may ask the judge to decide.",
+      "source_ids": [
+        "SRC_CSP_007"
+      ]
+    },
+    {
+      "id": "LAW_CSP_008",
+      "title": "Mediation is required when a judge must decide custody",
+      "statement": "California Courts states that if a judge needs to decide child custody in this case type, the parents will need to go to mediation as part of the process.",
+      "source_ids": [
+        "SRC_CSP_002"
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "id": "PROC_CSP_001",
+      "title": "Overall Petition for Custody and Support process",
+      "description": "California Courts organizes the case into three broad stages.",
+      "steps": [
+        "Start the custody and support case by filing the required papers.",
+        "Formally notify the other parent by serving the filed papers.",
+        "Finish the case through default, agreement, or a judge's decision; if custody must be decided by a judge, participate in mediation."
+      ],
+      "source_ids": [
+        "SRC_CSP_002"
+      ]
+    },
+    {
+      "id": "PROC_CSP_002",
+      "title": "Start a custody and support case",
+      "description": "An eligible legal parent starts the case by preparing and filing the required forms in the appropriate family-law court.",
+      "steps": [
+        "Identify the court in the county where the child generally lives or can be found.",
+        "Complete Petition for Custody and Support of Minor Children (FL-260).",
+        "Complete Summons (Uniform Parentage—Petition for Custody and Support) (FL-210).",
+        "Complete Declaration Under Uniform Child Custody Jurisdiction and Enforcement Act (FL-105/GC-120).",
+        "Add any optional attachments needed to describe requested custody or parenting-time orders.",
+        "Check for required local court forms.",
+        "File the forms and pay the filing fee or request a fee waiver."
+      ],
+      "source_ids": [
+        "SRC_CSP_003",
+        "SRC_CSP_004",
+        "SRC_CSP_009"
+      ]
+    },
+    {
+      "id": "PROC_CSP_003",
+      "title": "Request temporary orders while the case is pending",
+      "description": "A party who needs custody, parenting-time, or support decisions before final judgment must use the temporary-order process in addition to opening the case.",
+      "steps": [
+        "Identify the temporary orders needed.",
+        "Complete the additional papers required to request a court date and temporary orders.",
+        "File the request with the court and follow the applicable notice, service, and hearing requirements."
+      ],
+      "source_ids": [
+        "SRC_CSP_003",
+        "SRC_CSP_006"
+      ]
+    },
+    {
+      "id": "PROC_CSP_004",
+      "title": "Serve the Petition and Summons",
+      "description": "After filing, the petitioner must formally notify the respondent using an authorized service method.",
+      "steps": [
+        "Choose a server who is at least 18 and is not a party to the case.",
+        "Have the server deliver the filed papers and required blank response forms to the respondent using an authorized method.",
+        "Have the server complete the Proof of Service.",
+        "File the Proof of Service with the court.",
+        "Wait for the respondent's response period or proceed under the appropriate next-step process."
+      ],
+      "source_ids": [
+        "SRC_CSP_005"
+      ]
+    },
+    {
+      "id": "PROC_CSP_005",
+      "title": "Respond to a Petition for Custody and Support",
+      "description": "A respondent who wants to participate completes, files, and serves response papers within the applicable response period.",
+      "steps": [
+        "Complete Response to Petition for Custody and Support of Minor Children (FL-270).",
+        "Complete the UCCJEA declaration (FL-105/GC-120) when required.",
+        "Determine whether temporary orders are needed.",
+        "Check for any required local forms.",
+        "File the response with the court.",
+        "Have another qualified adult serve the response and complete the required proof of service."
+      ],
+      "source_ids": [
+        "SRC_CSP_006",
+        "SRC_CSP_009"
+      ]
+    },
+    {
+      "id": "PROC_CSP_006",
+      "title": "Finalize the custody and support case",
+      "description": "The finalization route depends on whether the case is a default, an agreement, or a contested case decided by the judge.",
+      "steps": [
+        "Determine whether the case will finish by default, written agreement, or trial.",
+        "If the parents can agree, prepare a written and signed agreement and the required judgment forms.",
+        "If they cannot agree, complete the required court process so a judge can decide; custody disputes require mediation before judicial decision.",
+        "Prepare and submit the appropriate final forms.",
+        "Obtain the judge's final judgment concerning custody and support."
+      ],
+      "source_ids": [
+        "SRC_CSP_002",
+        "SRC_CSP_007"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "id": "family_law_pathways",
+  "title": "Prototype 1 Family Law Pathway Tree",
+  "version": "1.0",
+  "start_node": "NODE_001",
+  "nodes": [
+    {
+      "id": "NODE_001",
+      "title": "Family Law",
+      "knowledge_refs": {
+        "definitions": [],
+        "laws": [],
+        "procedures": []
+      },
+      "options": [
+        {
+          "label": "Divorce (including legal separation and annulment)",
+          "next_node": "NODE_DIV_100"
+        },
+        {
+          "label": "Parentage",
+          "next_node": "NODE_PAR_100"
+        },
+        {
+          "label": "Petition for custody and support of minor children",
+          "next_node": "NODE_CSP_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_DIV_100",
+      "title": "Divorce, legal separation, and annulment",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_DIV_001",
+          "DEF_DIV_002",
+          "DEF_DIV_003"
+        ],
+        "laws": [],
+        "procedures": []
+      },
+      "options": [
+        {
+          "label": "Divorce",
+          "next_node": "NODE_DIV_110"
+        },
+        {
+          "label": "Legal separation",
+          "next_node": "NODE_DIV_120"
+        },
+        {
+          "label": "Annulment",
+          "next_node": "NODE_DIV_130"
+        },
+        {
+          "label": "Date of separation",
+          "next_node": "NODE_DIV_140"
+        },
+        {
+          "label": "Back to Family Law",
+          "next_node": "NODE_001"
+        }
+      ]
+    },
+    {
+      "id": "NODE_DIV_110",
+      "title": "Divorce",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_DIV_001",
+          "DEF_DIV_004",
+          "DEF_DIV_005"
+        ],
+        "laws": [
+          "LAW_DIV_001",
+          "LAW_DIV_002",
+          "LAW_DIV_003",
+          "LAW_DIV_007"
+        ],
+        "procedures": [
+          "PROC_DIV_001",
+          "PROC_DIV_002"
+        ]
+      },
+      "options": [
+        {
+          "label": "Joint petition",
+          "next_node": "NODE_DIV_111"
+        },
+        {
+          "label": "Back",
+          "next_node": "NODE_DIV_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_DIV_111",
+      "title": "Joint petition for divorce or legal separation",
+      "knowledge_refs": {
+        "definitions": [],
+        "laws": [
+          "LAW_DIV_003"
+        ],
+        "procedures": [
+          "PROC_DIV_005"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_DIV_110"
+        }
+      ]
+    },
+    {
+      "id": "NODE_DIV_120",
+      "title": "Legal separation",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_DIV_002"
+        ],
+        "laws": [
+          "LAW_DIV_004"
+        ],
+        "procedures": [
+          "PROC_DIV_002",
+          "PROC_DIV_003",
+          "PROC_DIV_005"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_DIV_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_DIV_130",
+      "title": "Annulment",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_DIV_003"
+        ],
+        "laws": [
+          "LAW_DIV_005",
+          "LAW_DIV_006"
+        ],
+        "procedures": [
+          "PROC_DIV_004"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_DIV_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_DIV_140",
+      "title": "Date of separation",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_DIV_004"
+        ],
+        "laws": [
+          "LAW_DIV_007"
+        ],
+        "procedures": []
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_DIV_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_PAR_100",
+      "title": "Parentage",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_PAR_001",
+          "DEF_PAR_002"
+        ],
+        "laws": [
+          "LAW_PAR_001",
+          "LAW_PAR_002"
+        ],
+        "procedures": [
+          "PROC_PAR_001"
+        ]
+      },
+      "options": [
+        {
+          "label": "Start a parentage case",
+          "next_node": "NODE_PAR_110"
+        },
+        {
+          "label": "Voluntary Declaration of Parentage (VDOP)",
+          "next_node": "NODE_PAR_120"
+        },
+        {
+          "label": "Disputed or unusual parentage",
+          "next_node": "NODE_PAR_130"
+        },
+        {
+          "label": "Finalize a parentage case",
+          "next_node": "NODE_PAR_140"
+        },
+        {
+          "label": "Ask the Local Child Support Agency for help",
+          "next_node": "NODE_PAR_150"
+        },
+        {
+          "label": "Back to Family Law",
+          "next_node": "NODE_001"
+        }
+      ]
+    },
+    {
+      "id": "NODE_PAR_110",
+      "title": "Start and serve a parentage case",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_PAR_004",
+          "DEF_PAR_005",
+          "DEF_PAR_006"
+        ],
+        "laws": [
+          "LAW_PAR_007"
+        ],
+        "procedures": [
+          "PROC_PAR_002",
+          "PROC_PAR_003"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_PAR_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_PAR_120",
+      "title": "Voluntary Declaration of Parentage (VDOP)",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_PAR_003"
+        ],
+        "laws": [
+          "LAW_PAR_003",
+          "LAW_PAR_004"
+        ],
+        "procedures": [
+          "PROC_PAR_004"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_PAR_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_PAR_130",
+      "title": "Disputed or unusual parentage",
+      "knowledge_refs": {
+        "definitions": [],
+        "laws": [
+          "LAW_PAR_005",
+          "LAW_PAR_006"
+        ],
+        "procedures": []
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_PAR_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_PAR_140",
+      "title": "Finalize a parentage case",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_PAR_007"
+        ],
+        "laws": [
+          "LAW_PAR_008"
+        ],
+        "procedures": [
+          "PROC_PAR_005"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_PAR_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_PAR_150",
+      "title": "Local Child Support Agency parentage process",
+      "knowledge_refs": {
+        "definitions": [],
+        "laws": [],
+        "procedures": [
+          "PROC_PAR_006"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_PAR_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_CSP_100",
+      "title": "Petition for Custody and Support of Minor Children",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_CSP_001",
+          "DEF_CSP_002",
+          "DEF_CSP_003"
+        ],
+        "laws": [
+          "LAW_CSP_001",
+          "LAW_CSP_002",
+          "LAW_CSP_003"
+        ],
+        "procedures": [
+          "PROC_CSP_001"
+        ]
+      },
+      "options": [
+        {
+          "label": "Start the case",
+          "next_node": "NODE_CSP_110"
+        },
+        {
+          "label": "Request temporary orders",
+          "next_node": "NODE_CSP_120"
+        },
+        {
+          "label": "Serve the other parent",
+          "next_node": "NODE_CSP_130"
+        },
+        {
+          "label": "Respond to a petition",
+          "next_node": "NODE_CSP_140"
+        },
+        {
+          "label": "Finalize the case",
+          "next_node": "NODE_CSP_150"
+        },
+        {
+          "label": "Back to Family Law",
+          "next_node": "NODE_001"
+        }
+      ]
+    },
+    {
+      "id": "NODE_CSP_110",
+      "title": "Start a custody and support case",
+      "knowledge_refs": {
+        "definitions": [],
+        "laws": [
+          "LAW_CSP_004"
+        ],
+        "procedures": [
+          "PROC_CSP_002"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_CSP_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_CSP_120",
+      "title": "Temporary orders",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_CSP_007"
+        ],
+        "laws": [
+          "LAW_CSP_004"
+        ],
+        "procedures": [
+          "PROC_CSP_003"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_CSP_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_CSP_130",
+      "title": "Serve the other parent",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_CSP_004",
+          "DEF_CSP_005"
+        ],
+        "laws": [
+          "LAW_CSP_005",
+          "LAW_CSP_006"
+        ],
+        "procedures": [
+          "PROC_CSP_004"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_CSP_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_CSP_140",
+      "title": "Respond to a custody and support petition",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_CSP_003"
+        ],
+        "laws": [
+          "LAW_CSP_006"
+        ],
+        "procedures": [
+          "PROC_CSP_005"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_CSP_100"
+        }
+      ]
+    },
+    {
+      "id": "NODE_CSP_150",
+      "title": "Finalize a custody and support case",
+      "knowledge_refs": {
+        "definitions": [
+          "DEF_CSP_006"
+        ],
+        "laws": [
+          "LAW_CSP_007",
+          "LAW_CSP_008"
+        ],
+        "procedures": [
+          "PROC_CSP_006"
+        ]
+      },
+      "options": [
+        {
+          "label": "Back",
+          "next_node": "NODE_CSP_100"
+        }
+      ]
+    }
+  ]
+}
