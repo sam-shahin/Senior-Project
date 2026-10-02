@@ -216,3 +216,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Android Studio
+.gradle/
+local.properties
+.idea/
+*.iml
+captures/
