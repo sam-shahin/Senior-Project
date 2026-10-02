@@ -1,5 +1,6 @@
 CREATE TABLE answers (
   id SERIAL PRIMARY KEY,
+  slug TEXT NOT NULL UNIQUE,
   topic TEXT NOT NULL,
   question TEXT NOT NULL,
   short_answer TEXT NOT NULL,
