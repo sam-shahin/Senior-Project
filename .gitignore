@@ -227,3 +227,4 @@ local.properties
 .idea/
 *.iml
 captures/
+/prototype2_wamp_backend/config.php
