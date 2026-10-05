@@ -1,4 +1,4 @@
-package com.example.lettalk_01
+package com.example.ui_v01
 
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.Column

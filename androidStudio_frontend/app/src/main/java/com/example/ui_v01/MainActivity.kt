@@ -20,10 +20,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             UI_v01Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+//                    Greeting(
+//                        name = "Android",
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
+                    LegalQuestionScreen()
                 }
             }
         }
