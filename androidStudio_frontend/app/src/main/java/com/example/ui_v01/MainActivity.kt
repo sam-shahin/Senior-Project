@@ -20,8 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             UI_v01Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    LetsTalkNavigation(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
