@@ -40,7 +40,74 @@ app.get('/api/answers/:slug', async (req, res) => {
   }
 });
 
-app.use((req, res) => res.status(404).json({ error: 'Not found' }));
+//frontend to backend connection testing (Brian)
+app.get('/api/test', (req, res) => {
+  res.status(200).json({ message: 'Connection successful' });
+});
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+// app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
+//frontend to backend connection testing (Brian)
+app.use(express.json());
+app.use((req, res, next) => {
+  console.log("Incoming:", req.method, req.url);
+  next();
+});
+
+app.post('/api/test-answer', (req, res) => {
+  const question = req.body.question;
+
+  if (typeof question !== 'string') {
+    return res.status(400).json({ error: 'Question required' });
+  }
+
+  let response;
+
+  switch (question) {
+    case "Mock general":
+      response = {
+        type: "general",
+        message: "This is a basic example of legal information."
+      };
+      break;
+
+    case "Mock custody":
+      response = {
+        type: "follow_up",
+        message: "Do you currently have a custody order?"
+      };
+      break;
+
+    case "Mock more info":
+      response = {
+        type: "legal",
+        message: "Here is a more detailed example of legal information.",
+        sourceUrl: "https://courts.ca.gov/forms-rules/rules-court"
+      };
+      break;
+
+    case "Mock suggestion":
+      response = {
+        type: "suggestion",
+        message: "I would like to discuss our parenting schedule calmly."
+      };
+      break;
+
+    default:
+      response = {
+        type: "general",
+        message: "That's a good question. This is a mock response."
+      };
+  }
+
+  return res.status(200).json(response);
+});
+
+// NOT part of frontend to backend connection testing
+app.use((req, res) => res.status(404).json({ error: 'Not found' }));
+
+//frontend to backend connection testing (Brian)
+app.listen(PORT, '127.0.0.1', () =>
+    console.log(`Listening on port ${PORT}`)
+);

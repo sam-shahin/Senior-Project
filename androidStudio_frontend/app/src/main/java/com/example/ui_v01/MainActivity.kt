@@ -23,6 +23,7 @@ class MainActivity : ComponentActivity() {
                     LetsTalkNavigation(
                         modifier = Modifier.padding(innerPadding)
                     )
+//                    BackendTest()
                 }
             }
         }
