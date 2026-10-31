@@ -30,6 +30,9 @@ fun getMockResponse(question: String): MockResponse {
             message = "I would like to discuss our parenting schedule calmly."
         )
 
+        //This makes the mock backend intentionally fail when the question is exactly Mock failure
+        "Mock failure" -> throw RuntimeException("Simulated backend failure")
+
         else -> MockResponse(
             type = "general",
             message = "That's a good question. This is a mock response."

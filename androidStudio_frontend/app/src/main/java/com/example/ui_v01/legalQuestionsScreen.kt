@@ -64,6 +64,8 @@ import androidx.compose.ui.window.PopupPositionProvider
 import androidx.compose.ui.window.PopupProperties
 import androidx.navigation.NavHostController
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -73,6 +75,9 @@ fun LegalQuestionScreen(navController: NavHostController) {
     val uriHandler = LocalUriHandler.current
     val messages = ChatCache.messages
     var showTestOptions by remember { mutableStateOf(false) }
+
+    var isLoading by remember { mutableStateOf(false) }
+    var errorMessage by remember { mutableStateOf<String?>(null) }
 
     val focusManager = LocalFocusManager.current
     val listState = rememberLazyListState()
@@ -93,15 +98,32 @@ fun LegalQuestionScreen(navController: NavHostController) {
     }
 
     fun sendMessage() {
-        if (question.isNotBlank()) {
-            messages.add("You: $question")
+        val submittedQuestion = question.trim()
 
-            val response = getMockResponse(question)
+        if (submittedQuestion.isEmpty() || isLoading) {
+            return
+        }
 
-            messages.add("Assistant: ${response.message}")
+        errorMessage = null
+        isLoading = true
 
-            question = ""
-            showTestOptions = false
+        messages.add("You: $submittedQuestion")
+        question = ""
+        showTestOptions = false
+
+        scope.launch {
+            try {
+                delay(2000)
+
+                val response = getMockResponse(submittedQuestion)
+                messages.add("Assistant: ${response.message}")
+            } catch (exception: CancellationException) {
+                throw exception
+            } catch (exception: Exception) {
+                errorMessage = "We could not get a response. Please try again."
+            } finally {
+                isLoading = false
+            }
         }
     }
 
@@ -166,8 +188,20 @@ fun LegalQuestionScreen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(16.dp))
 
         Text("Mockup: Assistant Screen")
-
         Spacer(modifier = Modifier.height(16.dp))
+
+        if (isLoading) {
+            Text("Loading...")
+        }
+
+        errorMessage?.let { message ->
+            Text(
+                text = message,
+                color = MaterialTheme.colorScheme.error
+            )
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
 
         // Chat history and scroll-to-bottom button.
         Box(
@@ -245,9 +279,10 @@ fun LegalQuestionScreen(navController: NavHostController) {
                 )
 
                 Button(
-                    onClick = { sendMessage() }
+                    onClick = { sendMessage() },
+                    enabled = !isLoading && question.isNotBlank()
                 ) {
-                    Text("Ask Question")
+                    Text(if (isLoading) "Please wait..." else "Ask Question")
                 }
             }
 
@@ -286,6 +321,7 @@ fun LegalQuestionScreen(navController: NavHostController) {
                             "Mock custody",
                             "Mock more info",
                             "Mock suggestion",
+                            "Mock failure",
                             "Mock other"
                         ).forEach { option ->
                             Text(
