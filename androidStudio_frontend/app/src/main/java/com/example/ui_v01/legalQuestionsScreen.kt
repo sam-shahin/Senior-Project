@@ -94,16 +94,25 @@ fun LegalQuestionScreen(navController: NavHostController) {
 
     fun sendMessage() {
         if (question.isNotBlank()) {
-            messages.add("You: $question")
+            val submittedQuestion = question
+            messages.add("You: $submittedQuestion")
 
-            val response = getMockResponse(question)
+//            val response = getMockResponse(question) //simple frontend testing
 
-            messages.add("Assistant: ${response.message}")
+            scope.launch { //frontend to backend testing
+                try {
+                    val response = getBackendTestResponse(submittedQuestion)
+                    messages.add("Assistant: ${response.message}")
+                } catch (e: Exception) {
+                    messages.add("Assistant: Connection failed: ${e.message}")
+                }
+            }
 
             question = ""
             showTestOptions = false
         }
     }
+
 
     // Scroll to the newest message when a message is added.
     LaunchedEffect(messages.size) {
